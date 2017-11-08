@@ -6,6 +6,6 @@ require.config({
         cookie : 'jquery-cookie/jquery.cookie',
         common : '../js/common',
         login : '../js/login',
-        
+        teacher_list : '../js/teacher-list',
     }
 })
