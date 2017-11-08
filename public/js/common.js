@@ -12,7 +12,8 @@ define(['jquery','template','cookie'],function($,template){
 			dataType:'json',
 			success:function(data){
 				if(data.code == 200){
-					location.href = "/"
+					$.removeCookie('loginInfo',{path:'/'});
+					location.href = '/';
 				}
 			}
 		})
@@ -25,8 +26,9 @@ define(['jquery','template','cookie'],function($,template){
                 +'<img src="{{tc_avatar}}">'
            		+'</div>'
            		+'<h4>{{tc_name}}</h4>';
-	var html = template.render(tpl,JSON.parse(info));
+	var html = template.render(tpl,info?JSON.parse(info):{});
 	// console.log(html);
 	$('.aside .profile').html(html);
+	
 })
 	
