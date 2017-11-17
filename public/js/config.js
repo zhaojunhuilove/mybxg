@@ -8,6 +8,10 @@ require.config({
         common : '../js/common',
         login : '../js/login',
         teacher_list : '../js/teacher-list',
+        addoridit : '../js/addoridit',
+        util : '../js/util',
+        course_list : '../js/course-list',
+        settings : '../js/settings'
     },
     shim : {
         bootstra : {

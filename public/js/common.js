@@ -1,8 +1,27 @@
-define(['jquery','template','cookie'],function($,template){
+define(['jquery','template','cookie','util'],function($,template,util){
 	// 侧边栏点击效果
 	$('.navs ul').prev('a').on('click', function () {
 		$(this).next().slideToggle();
 	});
+
+	  function setMenu(pathname){
+       	$('.aside .navs a').removeClass("active");
+        $('.aside .navs a[href="'+pathname+'"]').addClass('active').closest('ul').show();
+    }
+
+	// alert(location.pathname)
+	setMenu(location.pathname)
+
+	// $('.aside .navs ul>li').bind('click', function(){
+	// 	$('.aside .navs ul>li>a').removeClass("active");
+		
+	// 	$(this).addClass('active');
+		
+	// })
+
+
+	
+
 // 退出登录
 	 $('#btnOut').click(function(){
 		 

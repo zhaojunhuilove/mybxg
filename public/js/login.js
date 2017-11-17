@@ -1,6 +1,6 @@
 define(['jquery','cookie'], function($) {
         $("#btn").click(function(){
-            
+            // alert(111)
             $.ajax({
                 type:'post',
                 url:'/api/login',

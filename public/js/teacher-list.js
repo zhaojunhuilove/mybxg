@@ -3,6 +3,7 @@ define([
     'template',
     'bootstrap'
 ], function($, template) {
+    
     // 讲师管理
     $.ajax({
         type : 'get',
